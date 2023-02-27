@@ -1,5 +1,5 @@
 import express from 'express'
-import { HealthCheckRouter } from './Routes/health-check/health-check.routes';
+import { HealthCheckRouter } from '@routes/health-check/health-check.routes';
 import { UserRouter } from './Routes/UserRoutes/user.routes';
 
 export const app = express()

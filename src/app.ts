@@ -1,6 +1,6 @@
 import express from 'express'
-import { HealthCheckRouter } from '@routes/health-check/health-check.routes';
-import { UserRouter } from './Routes/UserRoutes/user.routes';
+import { HealthCheckRouter } from '@routes/health-check.routes';
+import { UserRouter } from './Routes/user.routes';
 
 export const app = express()
 const PORT = process.env.port || 5500;

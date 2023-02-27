@@ -1,25 +1,16 @@
-# Node.Js and Typescript boilerplate
+# Real State Backend Project SaaS
 
-This boilerplate include all you need to start working in a backend project with Node.js and Typescript and also integrates some tools for aplying the best practices like linting and code formating. This last two ones features are based on `airbnb` configuration, also i added somo initial configuration for testing with `jest`.
+This is a project with learning purposes, the goal of this project is to build a saas platform for real satte companies.
+This project is built with Node.JS, Express.Js, PostgreSQL and Docker, it includes Unit Testing with Jest.
 
-The dependencies included are:
+### Steps to local development.
 
-* "@types/express"
-* "@typescript-eslint/eslint-plugin"
-* "@typescript-eslint/parser"
-* "eslint"
-* "eslint-config-airbnb-base"
-* "eslint-config-airbnb-typescript"
-* "eslint-plugin-import"
-* "eslint-plugin-prettier"
-* "prettier"
-* "ts-node"
-* "ts-node-dev"
-* "typescript"
-* "dotenv"
-* "express"
-* "jest"
-* "ts-jest
+1. Clone the repository
+2. Install dependencies with `npm ci`
+3. Start developmet server with `npm run dev`
 
+### Steps to production build
 
-All PRs are wellcome ❤️
+1. Clone the repository
+2. Transplite Typescript to Javascript with `npm run build`
+3. Run de server with `npm run start`

@@ -1,3 +1,9 @@
-import { startExpressApp } from "./app";
+import { startExpressApp } from './app'
+import { initilizeDatabase } from './Helpers/DatabaseHelper'
 
-startExpressApp()
+async function startServer() {
+    await initilizeDatabase()
+    startExpressApp()
+}
+
+startServer()

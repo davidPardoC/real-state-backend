@@ -2,12 +2,7 @@ import { executeQueryDB } from '../../Helpers/DatabaseHelper'
 import UserRepository from '../UserDB'
 
 describe('User DB', () => {
-    beforeAll(async () => {
-        await executeQueryDB(
-            'CREATE TABLE IF NOT EXISTS users( user_id serial PRIMARY KEY, name text  NOT NULL, lastname text  NOT NULL, password text NOT NULL, email text UNIQUE NOT NULL);'
-        )
-    })
-
+    
     afterEach(async () => {
         await executeQueryDB('DELETE FROM users;')
     })
@@ -15,15 +10,18 @@ describe('User DB', () => {
     it('Should return selected user', async () => {
         const mockUser = {
             name: 'name',
-            lastname: 'lastname test',
+            last_name: 'lastname test',
             email: 'test@email.com',
             password: 'test password',
+            phone: '123456',
+            role: 'admin',
+            agency_id: '123',
         }
         const userRepository = new UserRepository()
         const newUser = await userRepository.createNewUser(mockUser)
         expect(newUser).toEqual({
             name: 'name',
-            lastname: 'lastname test',
+            last_name: 'lastname test',
             email: 'test@email.com',
         })
     })

@@ -5,7 +5,7 @@ export default class UserRepository {
     constructor() {}
 
     async createNewUser(user: UserType) {
-        const query = `INSERT INTO users(name, lastname, email, password) VALUES ('${user.name}','${user.lastname}', '${user.email}', '${user.password}')  RETURNING name, lastname, email;`
+        const query = `INSERT INTO users(name, last_name, email, password, phone, role, agency_id) VALUES ('${user.name}','${user.last_name}', '${user.email}', '${user.password}', '${user.phone}', '${user.role}', '${user.agency_id}')  RETURNING name, last_name, email;`
         try {
             const result = await executeQueryDB(query)
             return result[0]

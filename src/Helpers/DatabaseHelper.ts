@@ -1,5 +1,6 @@
 import { Client } from 'pg'
 import { config } from '../config'
+import fs from 'fs'
 
 export async function executeQueryDB(query: string) {
     const client = new Client({
@@ -18,4 +19,9 @@ export async function executeQueryDB(query: string) {
         await client.end()
         throw error
     }
+}
+
+export async function initilizeDatabase() {
+    const sql = fs.readFileSync('sql/create_tables.sql').toString()
+    await executeQueryDB(sql)
 }

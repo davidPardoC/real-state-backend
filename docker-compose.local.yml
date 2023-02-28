@@ -11,6 +11,15 @@ services:
       POSTGRES_PASSWORD: admin
     volumes:
       - local_pgdata:/var/lib/postgresql/data
+  db_test:
+    image: postgres
+    container_name: postgres_test_db
+    restart: always
+    ports:
+      - "8080:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin4_container

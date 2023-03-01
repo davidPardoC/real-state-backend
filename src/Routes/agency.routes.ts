@@ -2,6 +2,8 @@ import { Router, Request, Response } from 'express'
 import { ApiErrorMiddleWare } from '../Middlewares/ApiErrorMiddleware'
 import AgencyController from '../Controllers/AgencyController'
 import AgencyValidators from './Validators/agency.validator'
+import { AuthMiddleware } from '../Middlewares/AuthMiddlewares'
+import { SuperAdminMiddleware } from '../Middlewares/SuperAdminMiddleware'
 
 export const AgencyRouter = Router()
 
@@ -9,6 +11,8 @@ const agencyController = new AgencyController()
 
 AgencyRouter.post(
     '',
+    AuthMiddleware,
+    SuperAdminMiddleware,
     AgencyValidators.createNewAgencyValidator,
     ApiErrorMiddleWare,
     async (req: Request, res: Response) => {

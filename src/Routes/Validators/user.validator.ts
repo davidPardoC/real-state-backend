@@ -1,4 +1,5 @@
 import { checkSchema } from 'express-validator'
+import { Roles } from '../../Enums/RolesEnums'
 
 const createUser = checkSchema({
     name: { isString: true },
@@ -6,7 +7,7 @@ const createUser = checkSchema({
     email: { isEmail: true },
     password: { isString: true },
     phone: { isMobilePhone: true },
-    role: { not: true },
+    role: { isIn: { options: [Object.values(Roles)] } },
     agency_id: { isInt: true },
 })
 

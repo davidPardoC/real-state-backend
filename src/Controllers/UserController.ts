@@ -5,8 +5,12 @@ import { createUser } from '../UseCases/User'
 const userRepository = new UserRepository()
 
 export class UserController {
-    async createNewUser(user: UserType) {
-        const newUser = await createUser(user, userRepository.createNewUser)
+    async createNewUser(user: UserType, logedInUser: UserType) {
+        const newUser = await createUser(
+            user,
+            logedInUser,
+            userRepository.createNewUser
+        )
         return newUser
     }
 }

@@ -18,7 +18,7 @@ export default class UserRepository {
     }
 
     async getUserByEmail(email: string) {
-        const query = `SELECT name, last_name, email, phone, password FROM users WHERE email = '${email}';`
+        const query = `SELECT name, last_name, email, phone, password, role FROM users WHERE email = '${email}';`
         try {
             const result = await executeQueryDB(query)
             return result[0]

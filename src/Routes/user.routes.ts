@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express'
 import { UserController } from '../Controllers/UserController'
 import { ApiErrorMiddleWare } from '../Middlewares/ApiErrorMiddleware'
+import { UnauthorizedMiddleware } from '../Middlewares/AuthMiddlewares'
 import UserValidators from './Validators/user.validator'
 
 export const UserRouter = Router()
@@ -10,6 +11,7 @@ const userController = new UserController()
 // Create User
 UserRouter.post(
     '',
+    UnauthorizedMiddleware,
     UserValidators.createUser,
     ApiErrorMiddleWare,
     async (req: Request, res: Response) => {

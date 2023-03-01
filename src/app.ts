@@ -3,13 +3,14 @@ import express, { json } from 'express'
 import { UserRouter } from './Routes/user.routes'
 import { AgencyRouter } from './Routes/agency.routes'
 import { AuthRouter } from './Routes/auth.routes'
-import 'express-async-errors'
+import cookieParser from 'cookie-parser'
 
 export const app = express()
 const PORT = process.env.port || 5500
 
 // Routes
 app.use(json())
+app.use(cookieParser())
 app.use('/status', HealthCheckRouter)
 app.use('/users', UserRouter)
 app.use('/agencies', AgencyRouter)

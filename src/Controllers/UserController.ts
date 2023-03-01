@@ -1,4 +1,12 @@
+import UserRepository from '../DataAccess/UserDB'
+import { UserType } from '../Types/User.type'
+import { createUser } from '../UseCases/User'
+
+const userRepository = new UserRepository()
+
 export class UserController {
-    constructor() {}
-    createNewUser() {}
+    async createNewUser(user: UserType) {
+        const newUser = await createUser(user, userRepository.createNewUser)
+        return newUser
+    }
 }

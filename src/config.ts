@@ -9,4 +9,7 @@ export const config = {
         host: process.env.DB_HOST,
         password: process.env.DB_PASSWORD,
     },
+    jwt: {
+        jwt_secret: process.env.JWT_SECRET
+    }
 }

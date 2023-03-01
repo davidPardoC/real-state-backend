@@ -16,10 +16,11 @@ CREATE TABLE IF NOT EXISTS public.users
 CREATE TABLE IF NOT EXISTS public.agency
 (
     agency_id serial NOT NULL,
-    name text,
-    email text,
-    phone text,
+    name text NOT NULL,
+    email text NOT NULL,
+    phone text NOT NULL,
     domain text,
+    status text DEFAULT 'pending',
     PRIMARY KEY (agency_id),
     CONSTRAINT name UNIQUE (name)
 );

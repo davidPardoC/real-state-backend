@@ -1,8 +1,9 @@
 import { startExpressApp } from './app'
-import { initilizeDatabase } from './Helpers/DatabaseHelper'
+import { createSuperAdminUser, initilizeDatabase } from './Helpers/DatabaseHelper'
 
 async function startServer() {
     await initilizeDatabase()
+    await createSuperAdminUser()
     startExpressApp()
 }
 

@@ -33,6 +33,7 @@ services:
       - pgadmin-data:/var/lib/pgadmin
     links:
       - "db:database"
+      - "db_test:database_test"
 volumes:
   local_pgdata:
   pgadmin-data:

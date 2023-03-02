@@ -14,7 +14,7 @@ export async function loginUser(
         throw new NotFoundError()
     }
     if (!bcrypt.compareSync(password, user.password)) {
-        throw new UnAuthorizedError()
+        throw new UnAuthorizedError("Credenciales incorrectas")
     }
     delete user.password
     const token = jwt.sign(user, config.jwt.jwt_secret as Secret, {

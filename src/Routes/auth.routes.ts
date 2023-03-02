@@ -16,11 +16,11 @@ AuthRouter.post(
             const { email, password } = req.body
             const sessionTokens = await authController.login(email, password)
             res.cookie('token', sessionTokens.token, {
-                httpOnly: true,
+                httpOnly: false,
                 maxAge: 86400000,
             })
             res.cookie('resfreshToken', sessionTokens.refreshToken, {
-                httpOnly: true,
+                httpOnly: false,
                 maxAge: 604800000,
             })
             return res.status(200).json(sessionTokens)

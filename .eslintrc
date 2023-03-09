@@ -1,12 +1,12 @@
 {
-    "root": true,
-    "plugins": [
-      "import",
-      "prettier"
-    ],
-    "extends":"airbnb-typescript/base",
-    "parserOptions": {
-      "project": "./tsconfig.eslint.json",
-    },
-    "rules": { }
+  "root": true,
+  "plugins": ["import", "prettier"],
+  "extends": "airbnb-typescript/base",
+  "parserOptions": {
+    "project": "tsconfig.eslint.json"
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-redeclare": ["error", { "builtinGlobals": false }]
   }
+}

@@ -1,7 +1,7 @@
-import { Router } from 'express'
+import { Router } from 'express';
 
-export const HealthCheckRouter = Router()
+export const HealthCheckRouter = Router();
 
 HealthCheckRouter.get('', (_req, res) => {
-    return res.json({ status: 'ok' })
-})
+  return res.json({ status: 'ok' });
+});

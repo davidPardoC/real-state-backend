@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "043133d2-f6a9-4306-8df2-845628b99123",
+    "name": "Local Env",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-03-10T03:21:01.128Z",
+    "modified": "2023-03-10T03:21:01.128Z",
+    "data": [
+      {
+        "name": "uri",
+        "value": "http://localhost:5500"
+      }
+    ]
+  }
+]

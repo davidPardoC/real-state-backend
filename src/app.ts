@@ -5,6 +5,8 @@ import { AgencyRouter } from './Routes/agency.routes';
 import { AuthRouter } from './Routes/auth.routes';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import swaggerUI from 'swagger-ui-express';
+import { swaggerDocument } from './swagger';
 
 export const app = express();
 const PORT = process.env.port || 5500;
@@ -16,6 +18,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(json());
 app.use(cookieParser());
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 // Routes
 app.use('/status', HealthCheckRouter);
 app.use('/users', UserRouter);

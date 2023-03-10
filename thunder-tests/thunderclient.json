@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "b0871a2c-8779-4e60-821f-604641b40ce8",
+    "colId": "90bad36f-c024-4ae0-993e-357b33d7c132",
+    "containerId": "",
+    "name": "login",
+    "url": "{{uri}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-03-10T03:18:43.568Z",
+    "modified": "2023-03-10T03:22:18.137Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"pardodavid10@gmail.com\",\n  \"password\":\"Metallica1999#\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "05bd439d-0fd7-4626-9542-df000ca4c010",
+    "colId": "2c6f66c1-aad2-4c52-bca4-f8118d8b596e",
+    "containerId": "",
+    "name": "create user",
+    "url": "{{uri}}/users",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-03-10T03:23:06.396Z",
+    "modified": "2023-03-10T03:34:28.006Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"Juan\",\n  \"last_name\":\"Perez\",\n  \"email\":\"juanperez-1@email.com\",\n  \"password\":\"password\",\n  \"phone\":\"0995710256\",\n  \"role\":\"agent\",\n  \"agency_id\":0\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGF2aWQiLCJsYXN0X25hbWUiOiJQYXJkbyIsImVtYWlsIjoicGFyZG9kYXZpZDEwQGdtYWlsLmNvbSIsInBob25lIjoiKzU5MyAwOTk1NzEwMjU1Iiwicm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNjc4NDE4OTY2LCJleHAiOjE2Nzg1MDUzNjZ9.4nvKtE02r_sivprPCml1X2JQ4lifp7g_6shu2NpbpMQ"
+    },
+    "tests": []
+  },
+  {
+    "_id": "98da812d-a8c7-4748-82fd-bd7f6131d9b2",
+    "colId": "5647fa33-dd59-4c84-b5d1-8fc6ca1d428d",
+    "containerId": "",
+    "name": "get agencies",
+    "url": "{{uri}}/agencies",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-03-10T03:58:22.426Z",
+    "modified": "2023-03-10T03:58:35.282Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

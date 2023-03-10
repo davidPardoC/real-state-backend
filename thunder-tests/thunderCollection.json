@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "90bad36f-c024-4ae0-993e-357b33d7c132",
+    "colName": "Auth",
+    "created": "2023-03-10T03:17:55.209Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "2c6f66c1-aad2-4c52-bca4-f8118d8b596e",
+    "colName": "User",
+    "created": "2023-03-10T03:18:29.387Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "5647fa33-dd59-4c84-b5d1-8fc6ca1d428d",
+    "colName": "Agency",
+    "created": "2023-03-10T03:18:34.052Z",
+    "sortNum": 30000,
+    "folders": []
+  }
+]

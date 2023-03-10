@@ -1,3 +1,4 @@
 {
-    "peacock.remoteColor": "#215732"
+    "peacock.remoteColor": "#215732",
+    "thunder-client.saveToWorkspace": true
 }
